@@ -38,21 +38,21 @@ repeating this process with row 1, and so on."#
     fn examples(&self) -> Vec<Example> {
         vec![
             Example {
-                example: "[a b c] | wrap name | merge ( [1 2 3] | wrap index )",
+                example: "[a b c] | wrap name | merge ( [4 5 6] | wrap index )",
                 description: "Add an 'index' column to the input table",
                 result: Some(Value::list(
                     vec![
                         Value::test_record(record! {
                             "name" => Value::test_string("a"),
-                            "index" => Value::test_int(1),
+                            "index" => Value::test_int(4),
                         }),
                         Value::test_record(record! {
                             "name" => Value::test_string("b"),
-                            "index" => Value::test_int(2),
+                            "index" => Value::test_int(5),
                         }),
                         Value::test_record(record! {
                             "name" => Value::test_string("c"),
-                            "index" => Value::test_int(3),
+                            "index" => Value::test_int(6),
                         }),
                     ],
                     Span::test_data(),
